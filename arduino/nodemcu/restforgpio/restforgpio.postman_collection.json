@@ -1,0 +1,323 @@
+{
+	"info": {
+		"_postman_id": "fc57bf7a-4605-4453-861e-2722caf53eae",
+		"name": "restforgpio",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Root",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}/",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						""
+					]
+				},
+				"description": "/"
+			},
+			"response": []
+		},
+		{
+			"name": "Status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}/status",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"status"
+					]
+				},
+				"description": "/status"
+			},
+			"response": []
+		},
+		{
+			"name": "GPIO list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}/gpio",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"gpio"
+					]
+				},
+				"description": "/gpio"
+			},
+			"response": []
+		},
+		{
+			"name": "GPIO 0",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}/gpio/#id",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"gpio",
+						""
+					],
+					"hash": "id"
+				},
+				"description": "/gpio/0"
+			},
+			"response": []
+		},
+		{
+			"name": "GPIO 0 Input mode",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}/gpio/0/mode/input",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"gpio",
+						"0",
+						"mode",
+						"input"
+					]
+				},
+				"description": "/gpio/0/mode/input"
+			},
+			"response": []
+		},
+		{
+			"name": "GPIO 0 output mode",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}/gpio/0/mode/output",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"gpio",
+						"0",
+						"mode",
+						"output"
+					]
+				},
+				"description": "/gpio/0/mode/output"
+			},
+			"response": []
+		},
+		{
+			"name": "GPIO 0 low",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}/gpio/0/value/low",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"gpio",
+						"0",
+						"value",
+						"low"
+					]
+				},
+				"description": "/gpio/0/value/low"
+			},
+			"response": []
+		},
+		{
+			"name": "GPIO 0 high",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}/gpio/0/value/high",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"gpio",
+						"0",
+						"value",
+						"high"
+					]
+				},
+				"description": "/gpio/0/value/high"
+			},
+			"response": []
+		},
+		{
+			"name": "404 Not found",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}/doesnotexist",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"doesnotexist"
+					]
+				},
+				"description": "Wrong endpoint"
+			},
+			"response": []
+		},
+		{
+			"name": "405 Not allowed",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}/",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						""
+					]
+				},
+				"description": "Wrong method"
+			},
+			"response": []
+		},
+		{
+			"name": "405 Wrong value",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}/gpio/0/value/verylow",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"gpio",
+						"0",
+						"value",
+						"verylow"
+					]
+				},
+				"description": "Wrong value set"
+			},
+			"response": []
+		},
+		{
+			"name": "405 Wrong mode",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}/gpio/0/mode/inout",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"gpio",
+						"0",
+						"mode",
+						"inout"
+					]
+				},
+				"description": "Wrong mode set"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "7c999d9e-44ee-4ca1-8f94-e9396c1b61ab",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "bfec8149-b7b2-49dd-9418-d003f50328d8",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "d66d1099-d7ce-438b-a247-faf4667a185b",
+			"key": "host",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
